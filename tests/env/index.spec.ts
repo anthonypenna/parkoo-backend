@@ -7,6 +7,6 @@ describe('loadEnv', () => {
   it('should load environment variables', () => {
     const config = jest.spyOn(dotenv, 'config')
     loadEnv()
-    expect(config).toHaveBeenCalledWith({ path: '.env.local' })
+    expect(config).toHaveBeenCalledWith({ path: '.env' })
   })
 })
