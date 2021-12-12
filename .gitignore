@@ -1,0 +1,11 @@
+# env
+.env.local
+
+# jest
+coverage/
+
+# node
+node_modules/
+
+# typescript
+dist/

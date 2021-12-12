@@ -1,0 +1,24 @@
+version: '3'
+services:
+  app:
+    build: .
+    depends_on:
+      - mongo
+    env_file:
+      - .env.local
+
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+  mongo:
+    env_file:
+      - .env.local
+    image: mongo
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:
