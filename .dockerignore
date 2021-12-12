@@ -1,0 +1,23 @@
+# docker
+dockerfile
+docker-compose.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+
+# github
+.github
+
+# jest
+coverage
+
+# make
+makefile
+
+# node
+node_modules
+
+# project
+readme.md
+
+# yarn
+yarn.lock
