@@ -21,7 +21,7 @@ describe('connectDB', () => {
 
     await connectDB()
     expect(connect).toHaveBeenCalledWith(
-      'mongodb://username:password@host:port'
+      'mongodb+srv://username:password@host/db?retryWrites=true&w=majority'
     )
   })
 })
