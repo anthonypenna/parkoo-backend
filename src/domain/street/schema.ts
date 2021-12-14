@@ -1,9 +1,14 @@
 import { Schema } from 'mongoose'
+import { cleaningDayMapSchema } from '../cleaning-day-map/schema'
 import { Street } from './types'
 
 export const streetSchema = new Schema<Street>({
   cleaningDays: {
-    type: [Number],
+    type: cleaningDayMapSchema,
+    required: true,
+  },
+  id: {
+    type: String,
     required: true,
   },
   lat: {

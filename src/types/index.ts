@@ -1,6 +1,7 @@
 import { Request } from 'express'
 
-export type TypedRequest<B = unknown, P = unknown> = Request & {
+export interface TypedRequest<B = unknown, P = unknown>
+  extends Request<unknown> {
   body: B
   params: P
 }
